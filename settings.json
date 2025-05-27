@@ -1,0 +1,26 @@
+{
+    "php.validate.version": "8.2",
+    "php.suggest.basic": false,
+    "php.version": "8.2",
+    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "workbench.settings.applyToAllProfiles": [
+        
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "wordpress.snippets.enable": true,
+    "wordpress.snippets.prefix": "wp",
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "on",
+
+    "php.executablePath": "C:\\xampp\\php\\php.exe", // або шлях до вашого PHP
+    "php.validate.run": "onType",
+    "files.associations": {
+        "*.php": "php",
+        "*.tpl": "php"
+    },
+    "emmet.includeLanguages": {
+        "php": "html"
+    },
+    "php.validate.enable": true
+}

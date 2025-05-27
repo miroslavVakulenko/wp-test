@@ -1,0 +1,128 @@
+/* RESET / NORMALIZE HYBRID */
+
+/* Box sizing border-box by default */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+
+ul[role="list"],
+ol[role="list"],
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove default link styles */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for form elements */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove all animations and transitions for people who prefer that */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tables */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Strong and emphasis */
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}

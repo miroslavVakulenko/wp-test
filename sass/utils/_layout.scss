@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "mixins" as *;
+@use "variables" as *;
+
+$container-padding: (
+  360: 16px,
+  768: 40px,
+  1280: 70px,
+  1600: 90px,
+  1920: 0px,
+);
+
+@function get-padding($size) {
+  @return map.get($container-padding, $size);
+}
+
+.container-wrapper {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1600px;
+  padding-inline: get-padding(360);
+
+  @include respond(sm) {
+    padding-inline: get-padding(768);
+  }
+
+  @include respond(md) {
+    padding-inline: get-padding(1280);
+  }
+
+  @include respond(lg) {
+    padding-inline: get-padding(1600);
+  }
+
+  @include respond(xl) {
+    padding-inline: get-padding(1920);
+  }
+}

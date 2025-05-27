@@ -1,0 +1,18 @@
+{
+  "name": "tms-logistic",
+  "version": "1.0.0",
+  "description": "Custom WordPress theme based on underscores, with SCSS, ESLint and Prettier",
+  "author": "CHS",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.86.3"
+  },
+  "scripts": {
+    "dev": "sass --watch sass/style.scss:style.css",
+    "sass": "sass sass/style.scss:style.css",
+    "lint": "eslint ./assets/js",
+    "format": "prettier --write ."
+  }
+}

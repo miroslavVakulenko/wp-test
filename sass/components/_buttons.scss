@@ -1,0 +1,97 @@
+@use "../base/colors" as *;
+@use "blur-bubble" as *;
+
+// Base button styles
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 30px;
+
+  &,
+  & .icon,
+  & svg,
+  & path {
+    transition: all 0.3s ease;
+  }
+
+  // Icon specific styles
+  .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  // Large gap modifier
+  &.gap-lg {
+    gap: 12px;
+  }
+
+  &.no-gap {
+    gap: 0;
+  }
+
+  // Padding variations
+  &.rectangle {
+    padding: 12px 24px;
+  }
+
+  &.rounded {
+    padding: 8px;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  // Button types
+  &.glass {
+    @extend .blur-bubble;
+    color: #fff;
+
+    &:hover {
+      background-color: #ffffff4d;
+      border-color: #ffffff4d;
+      color: #fff;
+    }
+  }
+
+  &.white {
+    background-color: #fff;
+    color: #328ae3;
+    border-color: #fff;
+
+    &:hover {
+      background-color: #f8f9fa;
+      border-color: #f8f9fa;
+      color: #0a61bb;
+
+      .icon {
+        color: #0a61bb;
+
+        path {
+          fill: #0a61bb;
+        }
+      }
+    }
+
+    &[disabled] {
+      color: rgba($color-black, 0.5);
+    }
+  }
+
+  // Separator
+  .button-separator {
+    width: 1px;
+    height: 26px;
+    background-color: #ffffff33;
+  }
+}

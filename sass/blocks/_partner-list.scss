@@ -1,0 +1,83 @@
+@use "../utils/mixins" as *;
+@use "../utils/layout" as *;
+
+.block--partner-list {
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: 0;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @include respond(md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include respond(lg) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  .partner-logos {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 80px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .partner-logo {
+      min-height: 80px;
+      height: 50px;
+      flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      justify-content: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+
+      img,
+      svg {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+        display: block;
+      }
+
+      @include respond(lg) {
+        &,
+        img,
+        svg {
+          height: 60px;
+        }
+      }
+
+      @include respond(xl) {
+        &,
+        img,
+        svg {
+          height: 80px;
+        }
+      }
+    }
+  }
+}

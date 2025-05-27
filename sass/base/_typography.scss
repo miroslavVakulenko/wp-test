@@ -1,0 +1,68 @@
+@use "sass:list";
+@use "sass:map";
+@use "../utils/mixins" as *;
+
+// Base font
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@mixin font-class(
+  $name,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $breakpoints: ()
+) {
+  .#{$name} {
+    @include font-responsive($font-size, $line-height, $font-weight, $breakpoints);
+  }
+}
+
+$font-styles: (
+  fs-14-130-400: (14px, 1.3, 400),
+  fs-16-120-400: (16px, 1.2, 400),
+  fs-16-150-400: (16px, 1.5, 400),
+  fs-16-150-400-sm-18-lg-20: (16px, 1.5, 400, (sm: (font-size: 18px), lg: (font-size: 20px))),
+  fs-16-150-500: (16px, 1.5, 500),
+  fs-16-150-500-sm-18: (16px, 1.5, 500, (sm: (font-size: 18px))),
+  fs-16-150-500-sm-18-lg-20: (16px, 1.5, 500, (sm: (font-size: 18px), lg: (font-size: 20px))),
+  fs-16-150-500-sm-20: (16px, 1.5, 500, (sm: (font-size: 20px))),
+  fs-16-150-600-sm-18: (16px, 1.5, 600, (sm: (font-size: 18px))),
+  fs-16-140-600-sm-18: (16px, 1.4, 600, (sm: (font-size: 18px))),
+  fs-18-150-400-lg-20: (18px, 1.5, 400, (lg: (font-size: 20px))),
+  fs-18-150-500-lg-20: (18px, 1.5, 500, (lg: (font-size: 20px))),
+  fs-18-120-600: (18px, 1.2, 600),
+  fs-18-150-600: (18px, 1.5, 600),
+  fs-20-120-500: (20px, 1.2, 500),
+  fs-20-100-700-lg-26: (20px, 1.2, 700, (lg: (font-size: 26px))),
+  fs-24-120-600-lg-32: (24px, 1.2, 600, (lg: (font-size: 32px))),
+  fs-24-120-600-sm-36-lg-48: (24, 1.2, 600, (sm: (font-size: 36px), lg: (font-size: 48px))),
+  fs-40-100-600-sm-48-lg-64: (40px, 1, 600, (sm: (font-size: 48px), lg: (font-size: 64px))),
+  fs-40-100-600-sm-48-md-40-lg-48: (40px, 1, 600, (sm: (font-size: 48px), md: (font-size: 40px), lg: (font-size: 48px))),
+  fs-40-120-600-sm-70: (40px, 1, 600, (sm: (font-size: 70px), )),
+  fs-56-120-600: (56px, 1.2, 600),
+  fs-76-100-500: (76px, 1, 500),
+);
+
+@each $name, $style in $font-styles {
+  $font-size: list.nth($style, 1);
+  $line-height: list.nth($style, 2);
+  $font-weight: list.nth($style, 3);
+  $breakpoints: if(list.length($style) > 3, list.nth($style, 4), ());
+  @include font-class($name, $font-size, $line-height, $font-weight, $breakpoints);
+}
+
+@mixin font-by-name($name) {
+  $style: map.get($font-styles, $name);
+  @if $style {
+    $font-size: list.nth($style, 1);
+    $line-height: list.nth($style, 2);
+    $font-weight: list.nth($style, 3);
+    $breakpoints: if(list.length($style) > 3, list.nth($style, 4), ());
+    @include font-responsive($font-size, $line-height, $font-weight, $breakpoints);
+  }
+}
