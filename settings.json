@@ -2,7 +2,7 @@
     "php.validate.version": "8.2",
     "php.suggest.basic": false,
     "php.version": "8.2",
-    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "php.validate.executablePath": "C:/xampp/php/php.exe",
     "workbench.settings.applyToAllProfiles": [
         
     ],
@@ -13,7 +13,7 @@
     "editor.tabCompletion": "on",
     "editor.wordWrap": "on",
 
-    "php.executablePath": "C:\\xampp\\php\\php.exe", // або шлях до вашого PHP
+    "php.executablePath": "C:/xampp/php/php.exe",
     "php.validate.run": "onType",
     "files.associations": {
         "*.php": "php",
@@ -22,5 +22,22 @@
     "emmet.includeLanguages": {
         "php": "html"
     },
-    "php.validate.enable": true
+    "php.validate.enable": true,
+   "editor.formatOnSave": true,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true
+    },
+    "intelephense.format.braces": "k&r",
+    "intelephense.format.enable": true,
+    "html.format.wrapLineLength": 120,
+    "html.format.wrapAttributes": "auto",
+    "html.format.templating": true,
+    "html.format.preserveNewLines": true,
+    "html.format.maxPreserveNewLines": 2,
+    "html.format.indentInnerHtml": true,
+    "html.format.contentUnformatted": "pre,code,textarea"
 }
+
+
+

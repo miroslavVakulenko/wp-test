@@ -37,11 +37,12 @@ $button_link = $attributes['button-link'] ?? '';
 						</li>
 						<li>
 							<a href="#">
-								<img alt="tiktok" >
+								<img alt="tiktok">
 							</a>
-						</li><li>
+						</li>
+						<li>
 							<a href="#">
-								<img alt="facebook" >
+								<img alt="facebook">
 							</a>
 						</li>
 					</ul>
@@ -98,71 +99,72 @@ $button_link = $attributes['button-link'] ?? '';
 							<p>ПН-ПТ</p>
 							<p>18:00</p>
 						</li>
-						<lp
+						<li>
 							<p>СБ-НД</p>
 							<p>17.00</p>
-						</li>
-						<li>
-							<p>Початок дитячих вистав:</p>
-							<p>Сб</p>
-							<p>12.00</p>
-						</li>
-						
-					</ul>
-					<div>
-						<img alt="wallet">
-						<p>Ціна квитків від 70грн.</p>
-					</div>
-				</li>
-				
-				<li>
-					<ul>
-						<li>
-							<img alt="">
-							<p>м. Черкаси , бул. Шевченка, 234</p>
-						</li>
-						<li>
-							<img alt="">
-							<p>Директор, секретар: +38 (0472) 36-07-21</p>
-						</li>
-						<li>
-							<img alt="">
-							<p>Каса: +38 (0472) 36-07-21</p>
-						</li>
-						<li>
-							<img alt="">
-							<p>Адміністратор: +38 (0472) 36-07-18</p>
-						</li>
-						<li>
-							<img alt="">
-							<p>theatre.cherkasy@gmail.com</p>
-						</li>
-						<li>
-							<img alt="">
-							<p>Реквізити театру</p>
-						</li>
-					</ul>
+						</li> 
 				</li>
 				<li>
-					<div>
-						<p>В.О. ДИРЕКТОРА-</p>
-						<p>РУСЛАН ПАСКАЛОВ</p>
-					</div>
-					<div>
-						<p>ГОЛОВНИЙ РЕЖИСЕР ТЕАТРУ:</p>
-						<p>СТАНІСЛАВ САДАКЛІЄВ</p>
-					</div>
+					<p>Початок дитячих вистав:</p>
+					<p>Сб</p>
+					<p>12.00</p>
 				</li>
-				<li>
-					<div class="footer-buttons">
-						<a href="<?php echo esc_url(home_url('/contact')); ?>" class="footer-button">
-							<?php esc_html_e('Купити квиток', 'text-domain'); ?>
-						</a>
-						<a href="<?php echo esc_url(home_url('/about')); ?>" class="footer-button">
-							<?php esc_html_e('Допомога театру', 'text-domain'); ?>
-						</a>
-					</div>
-				</li>
+
+			</ul>
+			<div>
+				<img alt="wallet">
+				<p>Ціна квитків від 70грн.</p>
+			</div>
+			</li>
+
+			<li>
+				<ul>
+					<li>
+						<img alt="">
+						<p>м. Черкаси , бул. Шевченка, 234</p>
+					</li>
+					<li>
+						<img alt="">
+						<p>Директор, секретар: +38 (0472) 36-07-21</p>
+					</li>
+					<li>
+						<img alt="">
+						<p>Каса: +38 (0472) 36-07-21</p>
+					</li>
+					<li>
+						<img alt="">
+						<p>Адміністратор: +38 (0472) 36-07-18</p>
+					</li>
+					<li>
+						<img alt="">
+						<p>theatre.cherkasy@gmail.com</p>
+					</li>
+					<li>
+						<img alt="">
+						<p>Реквізити театру</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div>
+					<p>В.О. ДИРЕКТОРА-</p>
+					<p>РУСЛАН ПАСКАЛОВ</p>
+				</div>
+				<div>
+					<p>ГОЛОВНИЙ РЕЖИСЕР ТЕАТРУ:</p>
+					<p>СТАНІСЛАВ САДАКЛІЄВ</p>
+				</div>
+			</li>
+			<li>
+				<div class="footer-buttons">
+					<a href="<?php echo esc_url(home_url('/contact')); ?>" class="footer-button">
+						<?php esc_html_e('Купити квиток', 'text-domain'); ?>
+					</a>
+					<a href="<?php echo esc_url(home_url('/about')); ?>" class="footer-button">
+						<?php esc_html_e('Допомога театру', 'text-domain'); ?>
+					</a>
+				</div>
+			</li>
 			</ul>
 		</div>
 	</div>

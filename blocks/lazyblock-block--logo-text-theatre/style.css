@@ -1,0 +1,13 @@
+.theatre-logo-text-block {
+  padding: 20px 0;
+}
+
+.theatre-logo-text {
+  max-width: 264px;
+  margin: 0 auto;
+}
+
+.theatre-logo-text svg {
+  width: 100%;
+  height: auto;
+}
