@@ -122,6 +122,7 @@
   }
 
   @include respond(sm) {
+
     .header-container,
     .mobile-menu.active {
       padding-top: 30px;
@@ -156,6 +157,7 @@
   }
 
   @include respond(lg) {
+
     .header-container,
     .mobile-menu.active {
       .main-navigation {
@@ -339,6 +341,7 @@
                 path {
                   fill: $color-black-60;
                 }
+
                 .inner-circle {
                   fill: transparent;
                 }
@@ -398,15 +401,11 @@
         }
 
         .mobile-menu-content {
-          height: calc(
-            100vh -
-              (
-                30px // .mobile-menu padding-top
+          height: calc(100vh - (30px // .mobile-menu padding-top
                 + 52px // .mobile-menu-header height
                 + 40px // .mobile-menu margin-bottom
                 + 30px // .mobile-menu padding-bottom
-              )
-          );
+              ));
 
           flex-direction: row;
           justify-content: space-between;
@@ -471,8 +470,9 @@
         display: block;
       }
     }
-    
+
     > :not(.mobile-menu) {
+
       .main-navigation,
       .header-actions {
         background-color: rgba($color-dark-blue, 0.2);
@@ -515,6 +515,44 @@
 
         .icon {
           fill: $color-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+.main-header {
+  .header-content {
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      #main-logo {
+        display: none;
+      }
+
+      #theatre-logo {
+        display: block;
+      }
+
+      @include respond(sm) {
+        #main-logo {
+          display: none;
+        }
+
+        #theatre-logo {
+          display: block;
+        }
+      }
+
+      @include respond(md) {
+        #main-logo {
+          display: block;
+        }
+
+        #theatre-logo {
+          display: none;
         }
       }
     }
