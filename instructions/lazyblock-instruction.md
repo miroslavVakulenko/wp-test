@@ -21,12 +21,7 @@
    ```php
    <?php
 
-   /**
-   * LazyBlock: lazyblock-home-page-hero-section
-   * Description: Custom block for hero-section inside home-page.
-   */
-
-
+ 
    /** example
    $button_text = $attributes['button-text'] ?? '';
    $button_link = $attributes['button-link']['url'] ?? '';
