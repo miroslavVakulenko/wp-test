@@ -2,8 +2,8 @@
 $cards = $attributes['cards'] ?? [];
 ?>
 
-<div class="lazyblock-personalities-cards">
-  <div class="personalities-cards-container">
+<div class="lazyblock-personalities-card">
+  <div class="personalities-card-container">
     <?php if (!empty($cards) && is_array($cards)) : ?>
       <?php foreach ($cards as $card) : ?>
         <?php
