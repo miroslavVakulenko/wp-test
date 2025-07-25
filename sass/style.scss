@@ -1,18 +1,6 @@
-@use "utils/variables" as *;
-@use "utils/mixins" as *;
-@use "utils/breakpoints" as *;
-@use "utils/layout" as *;
 
 @use "base/reset" as *;
-@use "base/colors" as *;
-@use "base/typography" as *;
 
-@use "components/blur-bubble" as *;
-@use "components/buttons" as *;
 
-@use "blocks/header" as *;
-@use "blocks/footer" as *;
-@use "blocks/partner-list" as *;
-@use "blocks/offset-info" as *;
 
 @use "pages/hall-plan--seating-plan" as *;
